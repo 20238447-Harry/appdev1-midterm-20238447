@@ -1,1 +1,5 @@
-<p>task-info-component works!</p>
+<div *ngIf="task">
+  <p><strong>Description:</strong> {{ task.description }}</p>
+  <p><strong>Due Date:</strong> {{ task.dueDate }}</p>
+  <p><strong>Priority:</strong> {{ task.priority }}</p>
+</div>

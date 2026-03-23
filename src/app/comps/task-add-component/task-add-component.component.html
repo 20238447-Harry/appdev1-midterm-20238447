@@ -1,1 +1,24 @@
-<p>task-add-component works!</p>
+<h2>Add Task</h2>
+
+<form (ngSubmit)="addTask()">
+
+  <input [(ngModel)]="task.title" name="title" placeholder="Title" class="form-control mb-2" required>
+
+  <textarea [(ngModel)]="task.description" name="description" placeholder="Description" class="form-control mb-2"></textarea>
+
+  <input type="date" [(ngModel)]="task.dueDate" name="dueDate" class="form-control mb-2">
+
+  <select [(ngModel)]="task.status" name="status" class="form-select mb-2">
+    <option>Pending</option>
+    <option>In Progress</option>
+    <option>Completed</option>
+  </select>
+
+  <select [(ngModel)]="task.priority" name="priority" class="form-select mb-2">
+    <option>Low</option>
+    <option>Medium</option>
+    <option>High</option>
+  </select>
+
+  <button class="btn btn-success">Add Task</button>
+</form>
