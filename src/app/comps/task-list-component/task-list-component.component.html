@@ -1,27 +1,32 @@
-<div class="page-container">
+<h2>Task List</h2>
 
-  <h2>Task-list</h2>
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Status</th>
+      <th>Priority</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
 
-  <table>
-    <thead>
-      <tr>
-        <th>ID</th>
-        <th>Supplier Name</th>
-        <th>Contact Person</th>
-        <th>Action</th>
-      </tr>
-    </thead>
+  <tbody>
+    <tr *ngFor="let task of tasks">
+      <td>{{ task.title }}</td>
 
-    <tbody>
-      <tr *ngFor="let supplier of suppliers">
-        <td>{{ tasks.id }}</td>
-        <td>{{ tasks.TaskName }}</td>
-        <td>{{ tasks.contactPerson }}</td>
-        <td>
-          <button (click)="viewTaskDetails(tasks.id)">View</button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+      <td>
+        <span class="badge bg-primary">{{ task.status }}</span>
+      </td>
 
-</div>
+      <td>
+        <span class="badge bg-warning text-dark">{{ task.priority }}</span>
+      </td>
+
+      <td>
+        <a [routerLink]="['/tasks', task.id]" class="btn btn-info btn-sm">View</a>
+        <button class="btn btn-danger btn-sm" (click)="deleteTask(task.id)">Delete</button>
+        <button class="btn btn-secondary btn-sm" (click)="toggleStatus(task.id)">Toggle</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

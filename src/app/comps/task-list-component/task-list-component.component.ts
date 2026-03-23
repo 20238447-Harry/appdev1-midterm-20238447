@@ -5,11 +5,11 @@ import { RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  
+
   selector: 'app-task-list',
   standalone: true,
   imports: [CommonModule, RouterLink],
-  templateUrl: './task-list-component/task-list-component.component.html'
+  templateUrl: './task-list-component.component.html'
 })
 export class TaskListComponent {
   tasks: Task[] = [];
