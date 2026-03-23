@@ -1,1 +1,27 @@
-<p>task-list-component works!</p>
+<div class="page-container">
+
+  <h2>Task-list</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Supplier Name</th>
+        <th>Contact Person</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let supplier of suppliers">
+        <td>{{ tasks.id }}</td>
+        <td>{{ tasks.TaskName }}</td>
+        <td>{{ tasks.contactPerson }}</td>
+        <td>
+          <button (click)="viewTaskDetails(tasks.id)">View</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>

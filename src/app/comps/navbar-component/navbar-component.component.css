@@ -1,0 +1,47 @@
+/* Navbar container: vertical layout */
+.navbar {
+  background-color: #00cfcf;
+  padding: 15px 40px;
+  display: flex;
+  flex-direction: column; /* stack brand and links */
+  align-items: center; /* center horizontally */
+  position: relative; /* keep for z-index if needed */
+}
+
+/* Brand (Midterm Project) */
+.navbar-brand {
+  font-size: 26px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 10px; /* space between brand and links */
+}
+
+/* Nav list: remove absolute positioning */
+.navbar-nav {
+  list-style: none;
+  display: flex;
+  gap: 40px; /* space between links */
+  margin: 0;
+  padding: 0;
+  position: static; /* remove absolute positioning */
+  transform: none; /* remove translate */
+  top: auto; /* reset top */
+}
+
+/* Links */
+.nav-link {
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+}
+
+/* Hover effect */
+.nav-link:hover {
+  color: #222 !important;
+}
+
+/* Active link */
+.nav-link.active {
+  font-weight: bold;
+  border-bottom: 2px solid white;
+}

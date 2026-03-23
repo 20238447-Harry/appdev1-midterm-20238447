@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
   templateUrl: './task-detail-component.component.html',
   styleUrl: './task-detail-component.component.css'
 })
-export class TaskDetailComponentComponent {
+export class TaskDetailComponent {
 
 }
