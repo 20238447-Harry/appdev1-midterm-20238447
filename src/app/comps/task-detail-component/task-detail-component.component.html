@@ -1,1 +1,21 @@
-<p>task-detail-component works!</p>
+<div *ngIf="task" class="card">
+  <div class="card-header d-flex justify-content-between">
+    <h4>{{ task.title }}</h4>
+    <span class="badge bg-success">{{ task.status }}</span>
+  </div>
+
+  <div class="card-body">
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['info']">Info</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['edit']">Edit</a>
+      </li>
+    </ul>
+
+    <div class="mt-3">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

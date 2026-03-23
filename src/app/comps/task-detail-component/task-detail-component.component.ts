@@ -3,12 +3,13 @@ import { ActivatedRoute, RouterLink, RouterOutlet } from '@angular/router';
 import { TaskService } from '../../service/task.service';
 import { Task } from '../../models/task.model';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-task-detail',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, RouterLink],
-  templateUrl: './task-detail-component/task-detail-component.component.html'
+  imports: [CommonModule, RouterOutlet, RouterLink, FormsModule],
+  templateUrl: './task-detail-component.component.html'
 })
 export class TaskDetailComponent {
 

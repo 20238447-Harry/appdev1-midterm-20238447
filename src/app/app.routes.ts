@@ -10,6 +10,7 @@ export const routes: Routes = [
 
   { path: 'tasks', component: TaskListComponent },
 
+  // 🚨 MUST BE ABOVE :id
   { path: 'tasks/new', component: TaskAddComponent },
 
   {

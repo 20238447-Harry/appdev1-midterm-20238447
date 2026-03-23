@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TaskInfoComponentComponent } from './task-info-component.component';
+import { TaskInfoComponent } from './task-info-component.component';
 
 describe('TaskInfoComponentComponent', () => {
-  let component: TaskInfoComponentComponent;
-  let fixture: ComponentFixture<TaskInfoComponentComponent>;
+  let component: TaskInfoComponent;
+  let fixture: ComponentFixture<TaskInfoComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [TaskInfoComponentComponent]
+      imports: [TaskInfoComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(TaskInfoComponentComponent);
+    fixture = TestBed.createComponent(TaskInfoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
